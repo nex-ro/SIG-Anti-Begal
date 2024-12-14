@@ -1,0 +1,482 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.394357195406, 0.49977743157243198]
+      },
+      "properties": {
+        "OBJECTID": 1,
+        "No_": 1,
+        "Nama_Pemetaan": "Jl.SM.AMIN",
+        "ALAMAT": "Kelurahan Bina Widya, Kecamatan  Bina Widya",
+        "Y": 0.49977743157243198,
+        "X": 101.394357195406
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.45489216122, 0.48203724300376299]
+      },
+      "properties": {
+        "OBJECTID": 2,
+        "No_": 2,
+        "Nama_Pemetaan": "MTQ Pekanbaru Jl. Jend. Sudirman Utama",
+        "ALAMAT": "MTQ Pekanbaru Jl. Jend. Sudirman Utama, Simpang Tiga, Kec. Bukit Raya, Kota Pekanbaru, Riau 28282",
+        "Y": 0.48203724300376299,
+        "X": 101.45489216122
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.426727496358, 0.47050672595939103]
+      },
+      "properties": {
+        "OBJECTID": 3,
+        "No_": 3,
+        "Nama_Pemetaan": "Jl. Sidomulyo Tim.",
+        "ALAMAT": "Jl. Sidomulyo Tim., Kec. Marpoyan Damai, Kota Pekanbaru, Riau 28289",
+        "Y": 0.47050672595939103,
+        "X": 101.426727496358
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.38996766973101, 0.48794765115352901]
+      },
+      "properties": {
+        "OBJECTID": 4,
+        "No_": 4,
+        "Nama_Pemetaan": "Stadiun Utama Riau",
+        "ALAMAT": "F9MQ+FR6, Jl. Naga Sakti, Simpang Baru, Kec. Tampan, Kota Pekanbaru, Riau 28292",
+        "Y": 0.48794765115352901,
+        "X": 101.38996766973101
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.441858417791, 0.50270863474916505]
+      },
+      "properties": {
+        "OBJECTID": 5,
+        "No_": 5,
+        "Nama_Pemetaan": "sekitaran SMAN 5 pekanbaru",
+        "ALAMAT": "Jl. Bawal No.43, Wonorejo, Kec. Marpoyan Damai, Kota Pekanbaru, Riau 28125",
+        "Y": 0.50270863474916505,
+        "X": 101.441858417791
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.47584338109699, 0.46593852675528902]
+      },
+      "properties": {
+        "OBJECTID": 6,
+        "No_": 6,
+        "Nama_Pemetaan": "Jl. Labersa",
+        "ALAMAT": "Jl. Labersa, Simpang Tiga, Kec. Bukit Raya, Kota Pekanbaru, Riau 28289",
+        "Y": 0.46593852675528902,
+        "X": 101.47584338109699
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.48939889643999, 0.46915268296699603]
+      },
+      "properties": {
+        "OBJECTID": 7,
+        "No_": 7,
+        "Nama_Pemetaan": "Jl. Pesantren",
+        "ALAMAT": "Jl. Pesantren, Kulim, Kec. Tenayan Raya, Kota Pekanbaru, Riau 28289",
+        "Y": 0.46915268296699603,
+        "X": 101.48939889643999
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.457021524064, 0.47933383674090202]
+      },
+      "properties": {
+        "OBJECTID": 8,
+        "No_": 8,
+        "Nama_Pemetaan": "Jl. Datuk Wan Abdul Jamal",
+        "ALAMAT": "Jl. Datuk Wan Abdul Jamal, Simpang Tiga, Kec. Bukit Raya, Kota Pekanbaru, Riau 28288",
+        "Y": 0.47933383674090202,
+        "X": 101.457021524064
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.47865879829099, 0.47868604029415801]
+      },
+      "properties": {
+        "OBJECTID": 9,
+        "No_": 9,
+        "Nama_Pemetaan": "Jl. Kesadaran",
+        "ALAMAT": "Jl. Kesadaran, Tengkerang Labuai, Kec. Bukit Raya, Kota Pekanbaru, Riau 28125",
+        "Y": 0.47868604029415801,
+        "X": 101.47865879829099
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.503465938769, 0.49050311058525098]
+      },
+      "properties": {
+        "OBJECTID": 10,
+        "No_": 10,
+        "Nama_Pemetaan": "Jl. Singgalang",
+        "ALAMAT": "Jl. Singgalang 39-42, Tengkerang Tim., Kec. Tenayan Raya, Kota Pekanbaru, Riau 28131",
+        "Y": 0.49050311058525098,
+        "X": 101.503465938769
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.43476699811001, 0.48042795406935102]
+      },
+      "properties": {
+        "OBJECTID": 11,
+        "No_": 11,
+        "Nama_Pemetaan": "Dekat simpang 3",
+        "ALAMAT": "Jl. Arifin Ahmad, Marpoyan Damai, Pekanbaru City, Riau",
+        "Y": 0.48042795406935102,
+        "X": 101.43476699811001
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.440896496264, 0.50282132583499395]
+      },
+      "properties": {
+        "OBJECTID": 12,
+        "No_": 12,
+        "Nama_Pemetaan": "Jl Bawal Wonorejo",
+        "ALAMAT": "Marpoyan Damai, Pekanbaru City, Riau 28124",
+        "Y": 0.50282132583499395,
+        "X": 101.440896496264
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.383098342285, 0.48800429689185698]
+      },
+      "properties": {
+        "OBJECTID": 13,
+        "No_": 13,
+        "Nama_Pemetaan": "Jl. Naga Sakti",
+        "ALAMAT": "Simpang Baru, Tampan, Pekanbaru City, Riau 28292",
+        "Y": 0.48800429689185698,
+        "X": 101.383098342285
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.388227038594, 0.46439228313866099]
+      },
+      "properties": {
+        "OBJECTID": 14,
+        "No_": 14,
+        "Nama_Pemetaan": "Jalan HR Subrantas",
+        "ALAMAT": "Kelurahan Delima, Kecamatan Tampan Riau",
+        "Y": 0.46439228313866099,
+        "X": 101.388227038594
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.386161697578, 0.46833404107425403]
+      },
+      "properties": {
+        "OBJECTID": 15,
+        "No_": 15,
+        "Nama_Pemetaan": "Jl. Manyar Sakti",
+        "ALAMAT": "Simpang Baru, Tampan, Pekanbaru City, Riau",
+        "Y": 0.46833404107425403,
+        "X": 101.386161697578
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.438577028791, 0.52865038191496105]
+      },
+      "properties": {
+        "OBJECTID": 16,
+        "No_": 16,
+        "Nama_Pemetaan": "Jalan Cempaka",
+        "ALAMAT": "Sukajadi, Pekanbaru City, Riau 28156",
+        "Y": 0.52865038191496105,
+        "X": 101.438577028791
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.436008294305, 0.49698927234880702]
+      },
+      "properties": {
+        "OBJECTID": 17,
+        "No_": 17,
+        "Nama_Pemetaan": "JL.Terubuk",
+        "ALAMAT": "Marpoyan Damai, Pekanbaru City, Riau",
+        "Y": 0.49698927234880702,
+        "X": 101.436008294305
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.45359353177101, 0.52979819946010998]
+      },
+      "properties": {
+        "OBJECTID": 18,
+        "No_": 18,
+        "Nama_Pemetaan": "persimpangan Jalan Sultan Syarif Kasim dan Jalan Gatot Soebroto",
+        "ALAMAT": "persimpangan Jalan Sultan Syarif Kasim dan Jalan Gatot Soebroto",
+        "Y": 0.52979819946010998,
+        "X": 101.45359353177101
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.36965366591301, 0.460988765284506]
+      },
+      "properties": {
+        "OBJECTID": 19,
+        "No_": 19,
+        "Nama_Pemetaan": "Jalan Tuah Karya",
+        "ALAMAT": "Tuah Karya, Kec. Tampan, Kota Pekanbaru, Riau",
+        "Y": 0.460988765284506,
+        "X": 101.36965366591301
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.43955243892501, 0.54148113823253796]
+      },
+      "properties": {
+        "OBJECTID": 20,
+        "No_": 20,
+        "Nama_Pemetaan": "jembatan siak III",
+        "ALAMAT": "Kota Pekanbaru, Riau 28155",
+        "Y": 0.54148113823253796,
+        "X": 101.43955243892501
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.4688886034, 0.51373551433731002]
+      },
+      "properties": {
+        "OBJECTID": 21,
+        "No_": 21,
+        "Nama_Pemetaan": "Jl.Akasia 1 Pekanbaru",
+        "ALAMAT": "Jl.Akasia 1 Pekanbaru",
+        "Y": 0.51373551433731002,
+        "X": 101.4688886034
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.416900895027, 0.50055026905002198]
+      },
+      "properties": {
+        "OBJECTID": 22,
+        "No_": 22,
+        "Nama_Pemetaan": "Jalan Tuanku Tambusai",
+        "ALAMAT": "Jalan Tuanku Tambusai, Kecamatan Payung Sekaki.",
+        "Y": 0.50055026905002198,
+        "X": 101.416900895027
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.418661424515, 0.479980382114694]
+      },
+      "properties": {
+        "FID": 23,
+        "No": 24,
+        "Nama_Tempat": "Di depan Blue Bird",
+        "Alamat": "Jalan Soekarno Hatta",
+        "Foto_Lokasi": "https://drive.google.com/file/d/1FPih_ZK3pojiLoqaCH5DdVZNeaSTsEJk/view?usp=drive_link",
+        "Y": 0.47998,
+        "X": 101.418661
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.35854034802701, 0.459596649365887]
+      },
+      "properties": {
+        "FID": 24,
+        "No": 25,
+        "Nama_Tempat": "Dekat gerbang UIN Kel. Air Putih Kec. Tuah Madani Pekanbaru",
+        "Alamat": "Jln. HR. Subrantas",
+        "Foto_Lokasi": "https://drive.google.com/file/d/1zxhCuHhIoiOLtn1h_JXGPHt73fgYyJBR/view?usp=drive_link",
+        "Y": 0.459597,
+        "X": 101.35854
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.474128160828, 0.535015441452479]
+      },
+      "properties": {
+        "FID": 25,
+        "No": 26,
+        "Nama_Tempat": "Jl.Perkasa, Rejosari, Tenayan Raya",
+        "Alamat": "Jl.Perkasa, Rejosari, Tenayan Raya",
+        "Foto_Lokasi": "https://drive.google.com/file/d/1Bw8cXGchDXyXOkEjLj4GgSPhuhrN1tcG/view?usp=drive_link",
+        "Y": 0.535015,
+        "X": 101.474128
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.42339503140801, 0.599568289705349]
+      },
+      "properties": {
+        "FID": 26,
+        "No": 27,
+        "Nama_Tempat": "Arah simpang bingung",
+        "Alamat": "Jl. Yos Sudarso, Lembah Damai, Kec. Rumbai Pesisir, Kota Pekanbaru, Riau 28265",
+        "Foto_Lokasi": "https://drive.google.com/file/d/1Fgss0aAtmsMMUBAc9TfCXIMWKlAabHAj/view?usp=drive_link",
+        "Y": 0.599568,
+        "X": 101.423395
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.453343, 0.560731]
+      },
+      "properties": {
+        "FID": 27,
+        "No": 28,
+        "Nama_Tempat": "Teluk leok arah BP futsal",
+        "Alamat": "Jl. Teluk Leok, Limbungan, Kec. Rumbai Pesisir, Kota Pekanbaru, Riau 28266",
+        "Foto_Lokasi": "https://drive.google.com/file/d/1gPQRwnae2ArAy1A9wC5NGOG80a4ThLb4/view?usp=drive_link",
+        "Y": 0.560731,
+        "X": 101.453343
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.307388661948, 0.524738830829035]
+      },
+      "properties": {
+        "FID": 28,
+        "No": 29,
+        "Nama_Tempat": "Pengkolan arena jaya",
+        "Alamat": "Jl. Garuda Sakti 2, Karya Indah, Kec. Tapung, Kabupaten Kampar, Riau 28464",
+        "Foto_Lokasi": "https://drive.google.com/file/d/1wXHd-TstlrdMmuljjFCGKxSMdX7lGmT2/view?usp=drive_link",
+        "Y": 0.524739,
+        "X": 101.307389
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.490602, 0.589833]
+      },
+      "properties": {
+        "FID": 29,
+        "No": 30,
+        "Nama_Tempat": "Lintas Okura",
+        "Alamat": "Jl. Raja Panjang Okura, Tebing Tinggi Okura, Kec. Rumbai Pesisir, Kota Pekanbaru, Riau 28285",
+        "Foto_Lokasi": "https://drive.google.com/file/d/13KqwgirT1t7AcucnP6gM2yWBJUdEp53Q/view?usp=drive_link",
+        "Y": 0.589833,
+        "X": 101.490602
+      }
+    }
+  ]
+}
