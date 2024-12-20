@@ -345,7 +345,6 @@ const MapComponent = () => {
 
       <div ref={popupContainerRef} className="ol-popup">
         <div className="headd">
-          <p>Begal</p>
         </div>
         <a ref={popupCloserRef} href="#" className="ol-popup-closer"></a>
         <div ref={popupContentRef}></div>
