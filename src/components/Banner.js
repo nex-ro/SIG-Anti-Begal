@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Deri", "Jevina Liviani", "Fadhilla Khairunnisa", "Sulthon Abdul Aziz", "Wan Amirul Syafiq" ];
+  const toRotate = ["Deri", "Jevina Liviani", "Fadhilla Khairunnisa", "Sulthon Abdul Aziz", "Wan Amirul Syafiq"];
   const period = 1000;
 
   useEffect(() => {
@@ -54,19 +54,21 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to our website</span>
-                <h1>{`Kelompok 4`}<br /> <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Deri", "Jevina Liviani", "Fadhilla Khairunnisa", "Sulthon Abdul Aziz", "Wan Amirul Syafiq R" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Website ini merupakan sebuah project Sistem Informasi Geografis yang berisikan penjelasan mengenai website ini dan juga terdapat sebuah maps untuk waspada begal di pekanbaru.</p>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <span className="tagline">Welcome to our website</span>
+                  <h1>{`Kelompok 4`}<br /> <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Deri", "Jevina Liviani", "Fadhilla Khairunnisa", "Sulthon Abdul Aziz", "Wan Amirul Syafiq R" ]'><span className="wrap">{text}</span></span></h1>
+                  <p style={{ textAlign: "left" }}>
+                    Website ini merupakan sebuah project Sistem Informasi Geografis yang berisikan penjelasan mengenai website ini dan juga terdapat sebuah maps untuk waspada begal di pekanbaru.
+                  </p>
                   <button onClick={() => console.log('connect')}><a href="#skills" className="wa-btn"> Selengkapnya <ArrowRightCircle size={25} /></a></button>
-              </div>}
+                </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                  <img src={headerImg} alt="Header Img" />
                 </div>}
             </TrackVisibility>
           </Col>
