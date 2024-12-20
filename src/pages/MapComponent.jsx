@@ -1,6 +1,5 @@
-// Import yang diperlukan
 import React, { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom"; // Tambahkan ini
+import { useNavigate } from "react-router-dom";
 import "../ol/ol.css";
 import { Map, View } from "ol";
 import TileLayer from "ol/layer/Tile";
@@ -13,6 +12,7 @@ import { Icon, Style } from "ol/style";
 import Overlay from "ol/Overlay";
 import XYZ from "ol/source/XYZ";
 import "../index2.css";
+import { Fill, Stroke } from "ol/style";
 
 const MapComponent = () => {
   const mapContainerRef = useRef(null);
@@ -20,8 +20,86 @@ const MapComponent = () => {
   const popupContentRef = useRef(null);
   const popupCloserRef = useRef(null);
   const mapRef = useRef(null);
+  const baseLayerRef = useRef(null);
   const [recentData, setRecentData] = useState([]);
-  const navigate = useNavigate(); // Hook untuk navigasi
+  const [selectedYear, setSelectedYear] = useState("all");
+  const [yearOptions, setYearOptions] = useState([]);
+
+  const navigate = useNavigate();
+
+  // Fungsi untuk parse timestamp menjadi Date object
+  const parseDate = (timestamp) => {
+    if (!timestamp) return null;
+    return new Date(timestamp);
+  };
+
+  const getIconSource = (kejadian) => {
+    if (kejadian < 3) return "icon/kuning.png";
+    if (kejadian >= 3 && kejadian <= 6) return "icon/orange.png";
+    if (kejadian > 6) return "icon/merah.png";
+    return "icon/hijau.png";
+  };
+
+  const getScale = (kejadian) => 0.08 + Math.min(kejadian, 10) * 0.0005;
+
+  const createFeatureStyle = (feature, visible = true) => {
+    if (!visible) {
+      return new Style({
+        fill: new Fill({ color: "rgba(0, 0, 0, 0)" }),
+        stroke: new Stroke({ color: "rgba(0, 0, 0, 0)" }),
+      });
+    }
+
+    return new Style({
+      image: new Icon({
+        anchor: [0.5, 46],
+        anchorXUnits: "fraction",
+        anchorYUnits: "pixels",
+        src: getIconSource(feature.get("jumlah_Kejadian")),
+        scale: getScale(feature.get("jumlah_Kejadian")),
+      }),
+    });
+  };
+
+  const filterByYear = (year) => {
+    setSelectedYear(year);
+
+    const vectorLayer = mapRef.current
+      .getLayers()
+      .getArray()
+      .find((layer) => layer.get('name') === 'begalLayer');
+
+    if (!vectorLayer) return;
+
+    const begalSource = vectorLayer.getSource();
+    const features = begalSource.getFeatures();
+
+    features.forEach((feature) => {
+      const featureDate = parseDate(feature.get("Tanggal_Kejadian"));
+      const featureYear = featureDate?.getFullYear();
+      const isVisible = year === "all" || featureYear === parseInt(year);
+      feature.setStyle(createFeatureStyle(feature, isVisible));
+    });
+
+    const visibleFeatures = features.filter((feature) => {
+      const featureDate = parseDate(feature.get("Tanggal_Kejadian"));
+      const featureYear = featureDate?.getFullYear();
+      return year === "all" || featureYear === parseInt(year);
+    });
+
+    const filteredData = visibleFeatures
+      .map((feature) => ({
+        id: feature.get("OBJECTID"),
+        alamat: feature.get("ALAMAT") || "Alamat tidak tersedia",
+        tanggal: parseDate(feature.get("Tanggal_Kejadian")),
+        coordinates: feature.getGeometry().getCoordinates(),
+      }))
+      .filter((item) => item.tanggal !== null)
+      .sort((a, b) => b.tanggal - a.tanggal)
+      .slice(0, 5);
+
+    setRecentData(filteredData);
+  };
 
   useEffect(() => {
     const overlay = new Overlay({
@@ -33,7 +111,15 @@ const MapComponent = () => {
       },
     });
 
-    const riau = new VectorLayer({
+    const baseLayer = new TileLayer({
+      source: new XYZ({
+        url: "https://basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+      }),
+    });
+
+    baseLayerRef.current = baseLayer;
+
+    const riauLayer = new VectorLayer({
       source: new VectorSource({
         format: new GeoJSON(),
         url: "data/pkuPolygon2.json",
@@ -47,84 +133,142 @@ const MapComponent = () => {
 
     const begalSource = new VectorSource({
       format: new GeoJSON(),
-      url: "data/begaltest.json",
+      url: "data/DataBegals.json",
     });
 
-    const begal = new VectorLayer({
+    begalSource.on("featuresloadend", () => {
+      const features = begalSource.getFeatures();
+      const years = new Set();
+      
+      features.forEach(feature => {
+        const date = parseDate(feature.get("Tanggal_Kejadian"));
+        if (date) {
+          years.add(date.getFullYear());
+        }
+      });
+
+      const sortedYears = Array.from(years).sort((a, b) => b - a);
+      setYearOptions(["all", ...sortedYears]);
+
+      const initialData = features
+        .map((feature) => ({
+          id: feature.get("OBJECTID"),
+          alamat: feature.get("ALAMAT") || "Alamat tidak tersedia",
+          tanggal: parseDate(feature.get("Tanggal_Kejadian")),
+          coordinates: feature.getGeometry().getCoordinates(),
+        }))
+        .filter((item) => item.tanggal !== null)
+        .sort((a, b) => b.tanggal - a.tanggal)
+        .slice(0, 5);
+
+      setRecentData(initialData);
+    });
+
+    const begalLayer = new VectorLayer({
       source: begalSource,
-      style: new Style({
-        image: new Icon({
-          anchor: [0.5, 46],
-          anchorXUnits: "flaticon",
-          anchorYUnits: "pixels",
-          src: "icon/icon.png",
-          width: 32,
-          height: 32,
-        }),
-      }),
+      name: 'begalLayer',
+      style: (feature) => createFeatureStyle(feature),
     });
 
     const map = new Map({
       target: mapContainerRef.current,
       overlays: [overlay],
-      layers: [
-        new TileLayer({
-          source: new XYZ({
-            url: "https://basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-          }),
-        }),
-        riau,
-        begal,
-      ],
+      layers: [baseLayer, riauLayer, begalLayer],
       view: new View({
         center: fromLonLat([101.438309, 0.51044]),
-         zoom: 12,
+        zoom: 12,
         extent: extent,
       }),
     });
 
     mapRef.current = map;
 
-    begalSource.on("featuresloadend", () => {
-      const features = begalSource.getFeatures();
-      const data = features.map((feature) => {
-        return {
-          id: feature.get("OBJECTID"),
-          alamat: feature.get("ALAMAT"),
-          tanggal: new Date(feature.get("Tanggal_Kejadian")),
-          coordinates: feature.getGeometry().getCoordinates(),
-        };
-      });
+    const polygonLayerCheckbox = document.getElementById("polygon");
+    const pointLayerCheckbox = document.getElementById("point");
+    const recentEventCheckbox = document.getElementById("recent");
+    const recentEventElement = document.getElementById("recentEvent");
 
-      const sortedData = data
-        .sort((a, b) => b.tanggal - a.tanggal)
-        .slice(0, 5);
-      setRecentData(sortedData);
+    polygonLayerCheckbox?.addEventListener("change", function () {
+      baseLayer.setSource(
+        this.checked
+          ? new XYZ({
+              url: "https://basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+            })
+          : new OSM()
+      );
     });
 
-    map.on("singleclick", function (evt) {
-      let feature = null;
+    pointLayerCheckbox?.addEventListener("change", function () {
+      begalLayer.setVisible(this.checked);
+    });
 
-      map.forEachFeatureAtPixel(evt.pixel, function (f, layer) {
-        if (layer === begal) {
-          feature = f;
-          return true;
+    recentEventCheckbox?.addEventListener("change", function () {
+      if (recentEventElement) {
+        recentEventElement.style.display = this.checked ? "block" : "none";
+      }
+    });
+
+    map.on("singleclick", (evt) => {
+      const feature = map.forEachFeatureAtPixel(
+        evt.pixel,
+        (f, layer) => layer === begalLayer ? f : null
+      );
+
+      if (feature) {
+        const imageSrc = feature.get("OBJECTID") || "noImg";
+        const alamat = feature.get("ALAMAT") || "Alamat tidak tersedia";
+        const tanggal = parseDate(feature.get("Tanggal_Kejadian"))?.toLocaleDateString("id-ID") || "Tanggal tidak tersedia";
+        const kejadian = feature.get("jumlah_Kejadian") || "Data tidak tersedia";
+
+        const content = `
+          <img id="gambarAlamat" src="./icon/FOTO/${imageSrc}.png" alt="Gambar Lokasi" style="width: 100%; height: auto;"/>
+          <h4 id="textAlamat">Alamat: ${alamat}</h4>
+          <h4 id="textAlamat">Banyak kejadian: ${kejadian}</h4>
+          <h4 id="textAlamat">Kejadian terakhir: ${tanggal}</h4>
+        `;
+        
+        popupContentRef.current.innerHTML = content;
+        overlay.setPosition(evt.coordinate);
+      }
+    });
+
+    const featureOverlay = new VectorLayer({
+      source: new VectorSource(),
+      map: map,
+      style: new Style({
+        stroke: new Stroke({
+          color: "rgba(255, 255, 255, 0.7)",
+          width: 2,
+        }),
+      }),
+    });
+
+    let highlight;
+    const highlightFeature = (pixel) => {
+      const feature = map.forEachFeatureAtPixel(pixel, (feat) => feat);
+      
+      if (feature !== highlight) {
+        if (highlight) {
+          featureOverlay.getSource().removeFeature(highlight);
         }
-      });
-
-      if (!feature) {
-        return;
+        if (feature) {
+          featureOverlay.getSource().addFeature(feature);
+        }
+        highlight = feature;
       }
 
-      const imageSrc = feature.get("OBJECTID") || "noImg";
-      const alamat = feature.get("ALAMAT") || "Alamat tidak tersedia";
-      const coordinate = evt.coordinate;
-      const content = `
-        <img id="gambarAlamat" src="./icon/FOTO/${imageSrc}.png" alt="Gambar Lokasi" style="width: 100%; height: auto;"/>
-        <h4 >Alamat: ${alamat}</h4>
-      `;
-      popupContentRef.current.innerHTML = content;
-      overlay.setPosition(coordinate);
+      const info = document.getElementById('info');
+      if (info) {
+        info.innerHTML = feature ? (feature.get('Kecamatan') || '&nbsp;') : '&nbsp;';
+      }
+    };
+
+    map.on("pointermove", (evt) => {
+      if (evt.dragging) {
+        overlay.setPosition(undefined);
+        return;
+      }
+      highlightFeature(map.getEventPixel(evt.originalEvent));
     });
 
     popupCloserRef.current.onclick = () => {
@@ -142,7 +286,7 @@ const MapComponent = () => {
     const view = mapRef.current.getView();
     view.animate({
       center: coordinates,
-      zoom: 12,
+      zoom: 18,
       duration: 1000,
     });
   };
@@ -154,15 +298,17 @@ const MapComponent = () => {
         style={{ width: "100%", height: "100vh" }}
         id="map"
       ></div>
+
       <div
         style={{
           position: "absolute",
-          bottom: "0px",
+          bottom: "10px",
           left: "10px",
           width: "300px",
           padding: "10px",
           backgroundColor: "rgba(0,0,0, 0.9)",
           border: "3px solid red",
+          display: "block",
           borderRadius: "8px",
         }}
         id="recentEvent"
@@ -196,13 +342,51 @@ const MapComponent = () => {
         <a ref={popupCloserRef} href="#" className="ol-popup-closer"></a>
         <div ref={popupContentRef}></div>
       </div>
+
+      <div className="overlay-container">
+        <div>
+          <label>
+            <input type="checkbox" id="polygon" defaultChecked />
+            Dark Mode
+          </label>
+          <label>
+            <input type="checkbox" id="point" defaultChecked />
+            Titik Persebaran Begal
+          </label>
+          <label>
+            <input type="checkbox" id="recent" defaultChecked />
+            Recent Event
+          </label>
+        </div>
+        <div className="filter">
+          <select
+            value={selectedYear}
+            onChange={(e) => filterByYear(e.target.value)}
+            style={{ width: "100%", padding: "5px" }}
+          >
+            {yearOptions.map((year) => (
+              <option key={year} value={year}>
+                {year === "all" ? "Semua Tahun" : year}
+              </option>
+            ))}
+          </select>
+        </div>
+        <label>
+          <br />
+          <h5>Info:</h5>
+          <div id="info">&nbsp;</div>
+        </label>
+      </div>
+
       <div
         className="buttonHome"
         style={{ cursor: "pointer" }}
-        onClick={() => navigate("/")} // Tambahkan navigasi di sini
+        onClick={() => navigate("/")}
       >
         Home
       </div>
+      <div className="policeLine topPolice"></div>
+      <div className="policeLine botPolice"></div>
     </div>
   );
 };

@@ -1,0 +1,764 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [
+    {
+      "type" : "Feature",
+      "id" : 1,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.39435719500005,
+          0.49977743200003033
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 1,
+        "NO_" : 1,
+        "NAMA_TEMPAT" : "Jl.SM.AMIN",
+        "X" : 101.394357195406,
+        "Y" : 0.49977743157243198,
+        "ALAMAT" : " Kelurahan Bina Widya, Kecamatan  Bina Widya",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1aU9_XVKxQiDfe-6C8QhNj7f2YXVhhu-d/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44773",
+        "Jumlah_Pelaku" : 2,
+        "jumlah_Kejadian" : 5
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 2,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.45489216100003,
+          0.48203724300003614
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 2,
+        "NO_" : 2,
+        "NAMA_TEMPAT" : "MTQ Pekanbaru Jl. Jend. Sudirman Utama, Simpang Tiga, Kec. Bukit Raya, Kota Pekanbaru, Riau 28282",
+        "X" : 101.45489216122,
+        "Y" : 0.48203724300376299,
+        "ALAMAT" : "MTQ Pekanbaru Jl. Jend. Sudirman Utama, Simpang Tiga, Kec. Bukit Raya, Kota Pekanbaru, Riau 28282",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1fmI5ufyugmtrZWHrVeOouvHGXnereL5K/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44774",
+        "Jumlah_Pelaku" : 6,
+        "jumlah_Kejadian" : 1
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 3,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.42672749600007,
+          0.47050672600005328
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 3,
+        "NO_" : 3,
+        "NAMA_TEMPAT" : "Jl. Sidomulyo Tim., Kec. Marpoyan Damai, Kota Pekanbaru, Riau 28289",
+        "X" : 101.426727496358,
+        "Y" : 0.47050672595939103,
+        "ALAMAT" : "Jl. Sidomulyo Tim., Kec. Marpoyan Damai, Kota Pekanbaru, Riau 28289",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1SRepY-5Z4-AF8IzH0EgI1nJBYJPZtxgT/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44775",
+        "Jumlah_Pelaku" : 5,
+        "jumlah_Kejadian" : 3
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 4,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.38996767000003,
+          0.48794765100006998
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 4,
+        "NO_" : 4,
+        "NAMA_TEMPAT" : "Stadiun Utama Riau ",
+        "X" : 101.38996766973101,
+        "Y" : 0.48794765115352901,
+        "ALAMAT" : "F9MQ+FR6, Jl. Naga Sakti, Simpang Baru, Kec. Tampan, Kota Pekanbaru, Riau 28292",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1jrcrjaaen_vo8P39RcXpdJnjHSmErgkm/view?usp=drive_link",
+        "Tanggal_Kejadian" : "23-juni-2016",
+        "Jumlah_Pelaku" : 9,
+        "jumlah_Kejadian" : 1
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 5,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.44185841800004,
+          0.50270863500003315
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 5,
+        "NO_" : 5,
+        "NAMA_TEMPAT" : "sekitaran SMAN 5 pekanbaru",
+        "X" : 101.441858417791,
+        "Y" : 0.50270863474916505,
+        "ALAMAT" : "Jl. Bawal No.43, Wonorejo, Kec. Marpoyan Damai, Kota Pekanbaru, Riau 28125",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/17epYgGurwWC8ZvUuZZ2u8A9Y8LZ9TyxY/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44776",
+        "Jumlah_Pelaku" : 2,
+        "jumlah_Kejadian" : 4
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 6,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.47584338100006,
+          0.46593852700004845
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 6,
+        "NO_" : 6,
+        "NAMA_TEMPAT" : "Jl. Labersa, Simpang Tiga, Kec. Bukit Raya, Kota Pekanbaru, Riau 28289",
+        "X" : 101.47584338109699,
+        "Y" : 0.46593852675528902,
+        "ALAMAT" : "Jl. Labersa, Simpang Tiga, Kec. Bukit Raya, Kota Pekanbaru, Riau 28289",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1-XZm1Tfd-Bm5lwlFRXyX0UYBqqXUnOcX/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44777",
+        "Jumlah_Pelaku" : 2,
+        "jumlah_Kejadian" : 7
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 7,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.48939889600007,
+          0.46915268300006119
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 7,
+        "NO_" : 7,
+        "NAMA_TEMPAT" : "Jl. Pesantren, Kulim, Kec. Tenayan Raya, Kota Pekanbaru, Riau 28289",
+        "X" : 101.48939889643999,
+        "Y" : 0.46915268296699603,
+        "ALAMAT" : "Jl. Pesantren, Kulim, Kec. Tenayan Raya, Kota Pekanbaru, Riau 28289",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1wTFRLO9NuZsgZcLk6FLa4rWB5L28pLU_/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44778",
+        "Jumlah_Pelaku" : 5,
+        "jumlah_Kejadian" : 8
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 8,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.45702152400008,
+          0.47933383700006971
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 8,
+        "NO_" : 8,
+        "NAMA_TEMPAT" : "Jl. Datuk Wan Abdul Jamal, Simpang Tiga, Kec. Bukit Raya, Kota Pekanbaru, Riau 28288",
+        "X" : 101.457021524064,
+        "Y" : 0.47933383674090202,
+        "ALAMAT" : "Jl. Datuk Wan Abdul Jamal, Simpang Tiga, Kec. Bukit Raya, Kota Pekanbaru, Riau 28288",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1WdxaMdXIOLCv4Ul3PUX0-1WXgR3UrLub/view?usp=drive_link",
+        "Tanggal_Kejadian" : "23-juni-2017",
+        "Jumlah_Pelaku" : 4.1428571428571397,
+        "jumlah_Kejadian" : 9
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 9,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.47865879800008,
+          0.47868604000007053
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 9,
+        "NO_" : 9,
+        "NAMA_TEMPAT" : "Jl. Kesadaran, Tengkerang Labuai, Kec. Bukit Raya, Kota Pekanbaru, Riau 28125",
+        "X" : 101.47865879829099,
+        "Y" : 0.47868604029415801,
+        "ALAMAT" : "Jl. Kesadaran, Tengkerang Labuai, Kec. Bukit Raya, Kota Pekanbaru, Riau 28125",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1s3H8waNzsDzowdk-oLcXhaUBf2lKZXKv/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44779",
+        "Jumlah_Pelaku" : 4.0714285714285703,
+        "jumlah_Kejadian" : 8.9285714285714306
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 10,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.50346593900008,
+          0.49050311100006638
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 10,
+        "NO_" : 10,
+        "NAMA_TEMPAT" : "Jl. Singgalang 39-42, Tengkerang Tim., Kec. Tenayan Raya, Kota Pekanbaru, Riau 28131",
+        "X" : 101.503465938769,
+        "Y" : 0.49050311058525098,
+        "ALAMAT" : "Jl. Singgalang 39-42, Tengkerang Tim., Kec. Tenayan Raya, Kota Pekanbaru, Riau 28131",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/178FtYsc8pjhrvbQYRSg2TLi5rADz5J5w/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44780",
+        "Jumlah_Pelaku" : 4,
+        "jumlah_Kejadian" : 9.8571428571428594
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 11,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.43476699800004,
+          0.48042795400004934
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 11,
+        "NO_" : 11,
+        "NAMA_TEMPAT" : "Dekat simpang 3",
+        "X" : 101.43476699811001,
+        "Y" : 0.48042795406935102,
+        "ALAMAT" : "Jl. Arifin Ahmad, Marpoyan Damai, Pekanbaru City, Riau",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1rLYv2MvFOVEHTY28KqB2ltQhGC_8S_xj/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44781",
+        "Jumlah_Pelaku" : 3.9285714285714302,
+        "jumlah_Kejadian" : 10.785714285714301
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 12,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.44089649600005,
+          0.5028213260000598
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 12,
+        "NO_" : 12,
+        "NAMA_TEMPAT" : "Jl Bawal Wonorejo",
+        "X" : 101.440896496264,
+        "Y" : 0.50282132583499395,
+        "ALAMAT" : "Marpoyan Damai, Pekanbaru City, Riau 28124",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1gWF637dvFkHQLHpycwpr6L1iFoFOFMgj/view?usp=drive_link",
+        "Tanggal_Kejadian" : "23-juni-2018",
+        "Jumlah_Pelaku" : 3.8571428571428501,
+        "jumlah_Kejadian" : 11.714285714285699
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 13,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.38309834200004,
+          0.48800429700003178
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 13,
+        "NO_" : 13,
+        "NAMA_TEMPAT" : "Jl. Naga Sakti",
+        "X" : 101.383098342285,
+        "Y" : 0.48800429689185698,
+        "ALAMAT" : " Simpang Baru, Tampan, Pekanbaru City, Riau 28292",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/18k7gDDtKs15cLLpLdGnEU4E2CR_lUsqO/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44782",
+        "Jumlah_Pelaku" : 3.7857142857142798,
+        "jumlah_Kejadian" : 12.642857142857199
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 14,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.38822703900007,
+          0.46439228300005198
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 14,
+        "NO_" : 14,
+        "NAMA_TEMPAT" : "Jalan HR Subrantas",
+        "X" : 101.388227038594,
+        "Y" : 0.46439228313866099,
+        "ALAMAT" : "Kelurahan Delima, Kecamatan Tampan Riau",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1OSL8VwBWNQIld1-opt8O6E9_fcseiqn-/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44783",
+        "Jumlah_Pelaku" : 3.71428571428571,
+        "jumlah_Kejadian" : 13.5714285714286
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 15,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.38616169800008,
+          0.46833404100004827
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 15,
+        "NO_" : 15,
+        "NAMA_TEMPAT" : "Jl. Manyar Sakti",
+        "X" : 101.386161697578,
+        "Y" : 0.46833404107425403,
+        "ALAMAT" : " Simpang Baru, Tampan, Pekanbaru City, Riau",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1FLiD8LlKBrcAhwrwHccNSa5I_9dDtxjW/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44784",
+        "Jumlah_Pelaku" : 3.6428571428571401,
+        "jumlah_Kejadian" : 14.5
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 16,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.43857702900004,
+          0.52865038200002346
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 16,
+        "NO_" : 16,
+        "NAMA_TEMPAT" : "Jalan Cempaka",
+        "X" : 101.438577028791,
+        "Y" : 0.52865038191496105,
+        "ALAMAT" : "Sukajadi, Pekanbaru City, Riau 28156",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/13iYxYbXv_W5esUEBBvEnkLL8eKz8j9PY/view?usp=drive_link",
+        "Tanggal_Kejadian" : "23-juni-2019",
+        "Jumlah_Pelaku" : 3.5714285714285698,
+        "jumlah_Kejadian" : 15.4285714285714
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 17,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.43600829400003,
+          0.49698927200006437
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 17,
+        "NO_" : 17,
+        "NAMA_TEMPAT" : "JL.Terubuk",
+        "X" : 101.436008294305,
+        "Y" : 0.49698927234880702,
+        "ALAMAT" : "Marpoyan Damai, Pekanbaru City, Riau",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1mlPQL_uFNpd53tXVVs_nBPNd9aUm2ezY/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44776",
+        "Jumlah_Pelaku" : 3.5,
+        "jumlah_Kejadian" : 16.3571428571429
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 18,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.45359353200007,
+          0.52979819900002667
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 18,
+        "NO_" : 18,
+        "NAMA_TEMPAT" : "persimpangan Jalan Sultan Syarif Kasim dan Jalan Gatot Soebroto",
+        "X" : 101.45359353177101,
+        "Y" : 0.52979819946010998,
+        "ALAMAT" : "persimpangan Jalan Sultan Syarif Kasim dan Jalan Gatot Soebroto",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1iDq3v11CJYeJBujPAr2Y_dAA-D5A-P7l/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44777",
+        "Jumlah_Pelaku" : 3.4285714285714302,
+        "jumlah_Kejadian" : 17.285714285714299
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 19,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.36965366600003,
+          0.46098876500002461
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 19,
+        "NO_" : 19,
+        "NAMA_TEMPAT" : "Jalan Tuah Karya",
+        "X" : 101.36965366591301,
+        "Y" : 0.460988765284506,
+        "ALAMAT" : "Tuah Karya, Kec. Tampan, Kota Pekanbaru, Riau",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1xMN6hJTatPp-er91vZMBI31B0l-YAfxV/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44778",
+        "Jumlah_Pelaku" : 3.3571428571428501,
+        "jumlah_Kejadian" : 18.214285714285701
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 20,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.43955243900007,
+          0.54148113800005149
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 20,
+        "NO_" : 20,
+        "NAMA_TEMPAT" : "jembatan siak III",
+        "X" : 101.43955243892501,
+        "Y" : 0.54148113823253796,
+        "ALAMAT" : "Kota Pekanbaru, Riau 28155",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1FojZ3IwPBzNp5KKCxAXgfOp3lV5YtqSY/view?usp=drive_link",
+        "Tanggal_Kejadian" : "23-juni-2017",
+        "Jumlah_Pelaku" : 3.2857142857142798,
+        "jumlah_Kejadian" : 19.142857142857199
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 21,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.46888860300004,
+          0.513735514000075
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 21,
+        "NO_" : 21,
+        "NAMA_TEMPAT" : "Jl.Akasia 1 Pekanbaru",
+        "X" : 101.4688886034,
+        "Y" : 0.51373551433731002,
+        "ALAMAT" : "Jl.Akasia 1 Pekanbaru",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1TGwR8-yYrRZn0SjPmQAdQb7KFoM-x2GE/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44779",
+        "Jumlah_Pelaku" : 3.21428571428571,
+        "jumlah_Kejadian" : 20.071428571428601
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 22,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.41690089500008,
+          0.50055026900002986
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 22,
+        "NO_" : 22,
+        "NAMA_TEMPAT" : "Jalan Tuanku Tambusai, Kecamatan Payung Sekaki.",
+        "X" : 101.416900895027,
+        "Y" : 0.50055026905002198,
+        "ALAMAT" : "Jalan Tuanku Tambusai, Kecamatan Payung Sekaki.",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/16q_CeMa2ifFGidL6mbyXgIKgofHvynNA/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44780",
+        "Jumlah_Pelaku" : 3.1428571428571401,
+        "jumlah_Kejadian" : 21
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 23,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.42056138000004,
+          0.49881802400005881
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 23,
+        "NO_" : 23,
+        "NAMA_TEMPAT" : "Jalan Lele, Kelurahan Tangkerang Barat, Kecamatan Marpoyan Damai Pekanbaru.",
+        "X" : 101.420561379685,
+        "Y" : 0.498818023962734,
+        "ALAMAT" : "Jalan Lele, Kelurahan Tangkerang Barat, Kecamatan Marpoyan Damai Pekanbaru.",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1QsPRCacs6F0TfJ6FJRVFoeEl54jO0D6a/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44781",
+        "Jumlah_Pelaku" : 3.0714285714285698,
+        "jumlah_Kejadian" : 21.928571428571399
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 24,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.41866142500004,
+          0.47998038200006476
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 24,
+        "NO_" : 24,
+        "NAMA_TEMPAT" : "Di depan Blue Bird",
+        "X" : 101.41866142451499,
+        "Y" : 0.47998038211469402,
+        "ALAMAT" : "Jalan Soekarno Hatta",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1FPih_ZK3pojiLoqaCH5DdVZNeaSTsEJk/view?usp=drive_link",
+        "Tanggal_Kejadian" : "23-juni-2018",
+        "Jumlah_Pelaku" : 3,
+        "jumlah_Kejadian" : 22.8571428571429
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 25,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.35854034800008,
+          0.45959664900004782
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 25,
+        "NO_" : 25,
+        "NAMA_TEMPAT" : "dekat gerbang UIN Kel. Air Putih Kec. Tuah Madani Pekanbaru",
+        "X" : 101.35854034802701,
+        "Y" : 0.45959664936588701,
+        "ALAMAT" : "Jln. HR. Subrantas",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1zxhCuHhIoiOLtn1h_JXGPHt73fgYyJBR/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44782",
+        "Jumlah_Pelaku" : 2.9285714285714302,
+        "jumlah_Kejadian" : 23.785714285714299
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 26,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.47412816100007,
+          0.53501544100004139
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 26,
+        "NO_" : 26,
+        "NAMA_TEMPAT" : "Jl.Perkasa,Rejosari,Tenayan Raya",
+        "X" : 101.474128160828,
+        "Y" : 0.53501544145247903,
+        "ALAMAT" : "Jl.Perkasa,Rejosari,Tenayan Raya",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1Bw8cXGchDXyXOkEjLj4GgSPhuhrN1tcG/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44783",
+        "Jumlah_Pelaku" : 2.8571428571428599,
+        "jumlah_Kejadian" : 24.714285714285701
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 27,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.42339503100004,
+          0.59956829000003609
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 27,
+        "NO_" : 27,
+        "NAMA_TEMPAT" : "arah simpang bingung",
+        "X" : 101.42339503140801,
+        "Y" : 0.59956828970534903,
+        "ALAMAT" : "Jl. Yos Sudarso,Lembah Damai, Kec. Rumbai Pesisir, Kota Pekanbaru, Riau 28265",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1Fgss0aAtmsMMUBAc9TfCXIMWKlAabHAj/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44784",
+        "Jumlah_Pelaku" : 2.7857142857142798,
+        "jumlah_Kejadian" : 25.642857142857199
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 28,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.45334300000007,
+          0.56073100000003251
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 28,
+        "NO_" : 28,
+        "NAMA_TEMPAT" : "teluk leok arah BP futsal",
+        "X" : 101.453343,
+        "Y" : 0.56073099999999998,
+        "ALAMAT" : "Jl. Teluk Leok,Limbungan, Kec. Rumbai Pesisir, Kota Pekanbaru, Riau 28266",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1gPQRwnae2ArAy1A9wC5NGOG80a4ThLb4/view?usp=drive_link",
+        "Tanggal_Kejadian" : "23-juni-2019",
+        "Jumlah_Pelaku" : 2.71428571428571,
+        "jumlah_Kejadian" : 26.571428571428601
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 29,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.30738866200005,
+          0.52473883100003604
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 29,
+        "NO_" : 29,
+        "NAMA_TEMPAT" : "pengkolan arena jaya",
+        "X" : 101.307388661948,
+        "Y" : 0.52473883082903505,
+        "ALAMAT" : "Jl. Garuda Sakti 2,Karya Indah, Kec. Tapung, Kabupaten Kampar, Riau 28464",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1wXHd-TstlrdMmuljjFCGKxSMdX7lGmT2/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44776",
+        "Jumlah_Pelaku" : 2.6428571428571401,
+        "jumlah_Kejadian" : 27.5
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 30,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.38707215200009,
+          0.50752298600002632
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 30,
+        "NO_" : 30,
+        "NAMA_TEMPAT" : "Simpang AKAP",
+        "X" : 101.387072152302,
+        "Y" : 0.50752298644342797,
+        "ALAMAT" : "G93Q+246, Labuh Baru Barat, Payung Sekaki, Pekanbaru City, Riau 28292",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1tOUa_pwt4Lue8ZGzzs363tIkBv8lY3l6/view?usp=drive_link",
+        "Tanggal_Kejadian" : "44777",
+        "Jumlah_Pelaku" : 2.5714285714285698,
+        "jumlah_Kejadian" : 28.428571428571399
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 31,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.47812705700005,
+          0.47118562600002178
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 31,
+        "NO_" : 31,
+        "NAMA_TEMPAT" : "Parit Indah",
+        "X" : 101.478127057276,
+        "Y" : 0.47118562570771,
+        "ALAMAT" : "Jl. Parit Indah,Pekanbaru City, Riau",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1FFcQG4keBHoEmbKBDZgyqef2e0vjrCGw/view?usp=drive_link",
+        "Tanggal_Kejadian" : "13-Jannuari-2023",
+        "Jumlah_Pelaku" : 2.5,
+        "jumlah_Kejadian" : 29.3571428571429
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 32,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.42432625700008,
+          0.51149166000004698
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 32,
+        "NO_" : 32,
+        "NAMA_TEMPAT" : "Jalan Arjuna",
+        "X" : 101.424326257488,
+        "Y" : 0.51149165975489796,
+        "ALAMAT" : "Labuh Baru Timur, Payung Sekaki, Pekanbaru City, Riau",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1gqlcg_EU16O5-WIUSVmmubnhe9d4it07/view?usp=drive_link",
+        "Tanggal_Kejadian" : "3-Feburari-2023",
+        "Jumlah_Pelaku" : 2.4285714285714302,
+        "jumlah_Kejadian" : 30.285714285714299
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 33,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          101.44878132900004,
+          0.45258615500006272
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 33,
+        "NO_" : 33,
+        "NAMA_TEMPAT" : "Jalan Pahlawan Kerja",
+        "X" : 101.448781328729,
+        "Y" : 0.45258615503793798,
+        "ALAMAT" : "Perhentian Marpoyan, Marpoyan Damai, Pekanbaru City, Riau",
+        "FOTO_LOKASI" : "https://drive.google.com/file/d/1q1Z_SCwBZlAHJVCEg68UuX0anxRk9Hk4/view?usp=drive_link",
+        "Tanggal_Kejadian" : "45543",
+        "Jumlah_Pelaku" : 2.3571428571428599,
+        "jumlah_Kejadian" : 31.214285714285701
+      }
+    }
+  ]
+}

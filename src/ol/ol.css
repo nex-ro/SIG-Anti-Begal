@@ -66,6 +66,26 @@
   animation: move-stripes-horizontal 20s linear infinite;
   z-index: -1;
 }
+.policeLine{
+  width: 100%;
+  height: 5px;
+  background: repeating-linear-gradient(
+    45deg,
+    #FFAA00 0,
+    #FFAA00 10px,
+    #040300 10px,
+    #040300 20px
+  );
+  animation: move-stripes-horizontal 20s linear infinite;
+}
+.topPolice{
+  position: absolute;
+  top: 0px;
+}
+.botPolice{
+  position: absolute;
+  bottom: 0px;
+}
 .headd,p{
   align-items: center;
   color: white;
@@ -77,6 +97,7 @@
 
 #recentEvent{
   color: #FFAA00;
+  z-index: 2;
 }
 .recentTxt{
   color: red;
@@ -105,6 +126,26 @@ color: #FFAA00;
   font-size: 12px;
   color: #FFAA00;
 }
+#textAlamat{
+  font-size: 16px;
+}
+
+.overlay-container label {
+  display: block;
+  margin-bottom: 5px;
+  }
+  .overlay-container {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color:#040300;
+    padding: 20px;
+    border-radius:10px;
+    min-width: 250px;
+    border: 1px solid red;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #FFAA00;
+    }
 @keyframes move-stripes-horizontal {
   0% {
     background-position: 0 0;
