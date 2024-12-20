@@ -122,10 +122,16 @@ border: 3px solid #FFAA00;
 color: #FFAA00;
 }
 
+
 #alamatDetail{
   font-size: 12px;
   color: #FFAA00;
 }
+.infoo{
+  margin-bottom: 5px;
+  border-bottom: 2px solid red;
+}
+
 #textAlamat{
   font-size: 16px;
 }

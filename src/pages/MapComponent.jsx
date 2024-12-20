@@ -259,7 +259,7 @@ const MapComponent = () => {
 
       const info = document.getElementById('info');
       if (info) {
-        info.innerHTML = feature ? (feature.get('Kecamatan') || '&nbsp;') : '&nbsp;';
+        info.innerHTML = feature ? (feature.get('Kecamatan') || '&nbsp;') : '-';
       }
     };
 
@@ -290,6 +290,15 @@ const MapComponent = () => {
       duration: 1000,
     });
   };
+  const zoomOutToInitialView = () => {
+    const view = mapRef.current.getView();
+    view.animate({
+      center: fromLonLat([101.438309, 0.51044]),  // Koordinat tengah peta
+      zoom: 12,  // Level zoom yang lebih rendah
+      duration: 1000,  // Durasi animasi
+    });
+  };
+  
 
   return (
     <div style={{ position: "relative" }}>
@@ -345,6 +354,9 @@ const MapComponent = () => {
 
       <div className="overlay-container">
         <div>
+        <div className="filter">
+        <h5 className="infoo">Filter:</h5>
+
           <label>
             <input type="checkbox" id="polygon" defaultChecked />
             Dark Mode
@@ -357,12 +369,19 @@ const MapComponent = () => {
             <input type="checkbox" id="recent" defaultChecked />
             Recent Event
           </label>
-        </div>
-        <div className="filter">
+          <h5>Find by year :</h5>
           <select
+            className="selectYear"
             value={selectedYear}
             onChange={(e) => filterByYear(e.target.value)}
-            style={{ width: "100%", padding: "5px" }}
+            style={{
+              width: "100%",
+              padding: "5px",
+              marginBottom: "10px",
+              backgroundColor: "#040300",
+              border: "1px solid #FFAA00",    
+              color: "#FFAA00",        
+            }}
           >
             {yearOptions.map((year) => (
               <option key={year} value={year}>
@@ -370,12 +389,31 @@ const MapComponent = () => {
               </option>
             ))}
           </select>
+          </div>
+
         </div>
         <label>
-          <br />
-          <h5>Info:</h5>
-          <div id="info">&nbsp;</div>
+          <h5 className="infoo">Info:</h5>
+          <div id="info">-</div>
         </label>
+        <label>
+        <button
+      className="zoomoutBtn"
+      onClick={zoomOutToInitialView}
+      style={{
+        padding: "5px",
+        backgroundColor: "#040300",
+        color: "#FFAA00",
+        border:"1px solid red",
+        borderRadius: "5px",
+        cursor: "pointer",
+        marginTop: "5px",
+      }}
+    >
+      Zoom Out
+    </button>
+        </label>
+
       </div>
 
       <div
