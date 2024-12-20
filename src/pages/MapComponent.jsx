@@ -27,7 +27,6 @@ const MapComponent = () => {
 
   const navigate = useNavigate();
 
-  // Fungsi untuk parse timestamp menjadi Date object
   const parseDate = (timestamp) => {
     if (!timestamp) return null;
     return new Date(timestamp);
@@ -63,17 +62,10 @@ const MapComponent = () => {
 
   const filterByYear = (year) => {
     setSelectedYear(year);
-
-    const vectorLayer = mapRef.current
-      .getLayers()
-      .getArray()
-      .find((layer) => layer.get('name') === 'begalLayer');
-
+    const vectorLayer = mapRef.current.getLayers().getArray().find((layer) => layer.get('name') === 'begalLayer');
     if (!vectorLayer) return;
-
     const begalSource = vectorLayer.getSource();
     const features = begalSource.getFeatures();
-
     features.forEach((feature) => {
       const featureDate = parseDate(feature.get("Tanggal_Kejadian"));
       const featureYear = featureDate?.getFullYear();
@@ -126,10 +118,7 @@ const MapComponent = () => {
       }),
     });
 
-    const extent = [
-      ...fromLonLat([101.1, 0.1]),
-      ...fromLonLat([101.8, 0.9]),
-    ];
+    const extent = [...fromLonLat([101.1, 0.1]), ...fromLonLat([101.8, 0.9])];
 
     const begalSource = new VectorSource({
       format: new GeoJSON(),
@@ -139,7 +128,6 @@ const MapComponent = () => {
     begalSource.on("featuresloadend", () => {
       const features = begalSource.getFeatures();
       const years = new Set();
-      
       features.forEach(feature => {
         const date = parseDate(feature.get("Tanggal_Kejadian"));
         if (date) {
@@ -244,8 +232,28 @@ const MapComponent = () => {
     });
 
     let highlight;
+    const getLocationStats = (feature) => {
+      if (!feature) return null;
+      const name = feature.get('name');
+      if (!name) return null;
+      const begalLayer = mapRef.current.getLayers().getArray().find((layer) => layer.get('name') === 'begalLayer');
+      if (!begalLayer) return null;
+      const begalFeatures = begalLayer.getSource().getFeatures();
+      const polygon = feature.getGeometry();
+      const begalCount = begalFeatures.filter(begalFeature => {
+        const point = begalFeature.getGeometry();
+        return polygon.intersectsCoordinate(point.getCoordinates());
+      }).length;
+      return `${name} - ${begalCount} titik begal`;
+    };
+
     const highlightFeature = (pixel) => {
-      const feature = map.forEachFeatureAtPixel(pixel, (feat) => feat);
+      const feature = map.forEachFeatureAtPixel(pixel, (feat, layer) => {
+        if (layer !== begalLayer) {
+          return feat;
+        }
+        return null;
+      });
       
       if (feature !== highlight) {
         if (highlight) {
@@ -259,7 +267,8 @@ const MapComponent = () => {
 
       const info = document.getElementById('info');
       if (info) {
-        info.innerHTML = feature ? (feature.get('Kecamatan') || '&nbsp;') : '-';
+        const locationStats = getLocationStats(feature);
+        info.innerHTML = locationStats || '-';
       }
     };
 
@@ -290,24 +299,19 @@ const MapComponent = () => {
       duration: 1000,
     });
   };
+
   const zoomOutToInitialView = () => {
     const view = mapRef.current.getView();
     view.animate({
-      center: fromLonLat([101.438309, 0.51044]),  // Koordinat tengah peta
-      zoom: 12,  // Level zoom yang lebih rendah
-      duration: 1000,  // Durasi animasi
+      center: fromLonLat([101.438309, 0.51044]),
+      zoom: 12,
+      duration: 1000,
     });
   };
-  
 
   return (
     <div style={{ position: "relative" }}>
-      <div
-        ref={mapContainerRef}
-        style={{ width: "100%", height: "100vh" }}
-        id="map"
-      ></div>
-
+      <div ref={mapContainerRef} style={{ width: "100%", height: "100vh" }} id="map"></div>
       <div
         style={{
           position: "absolute",
@@ -322,13 +326,8 @@ const MapComponent = () => {
         }}
         id="recentEvent"
       >
-        <h3 className="recentTxt" style={{ fontSize: "22px" }}>
-          Recently Event
-        </h3>
-        <ul
-          className="ulRecent"
-          style={{ listStyle: "none", padding: 0, margin: 0 }}
-        >
+        <h3 className="recentTxt" style={{ fontSize: "22px" }}>Recently Event</h3>
+        <ul className="ulRecent" style={{ listStyle: "none", padding: 0, margin: 0 }}>
           {recentData.map((item) => (
             <li
               key={item.id}
@@ -354,78 +353,65 @@ const MapComponent = () => {
 
       <div className="overlay-container">
         <div>
-        <div className="filter">
-        <h5 className="infoo">Filter:</h5>
-
-          <label>
-            <input type="checkbox" id="polygon" defaultChecked />
-            Dark Mode
-          </label>
-          <label>
-            <input type="checkbox" id="point" defaultChecked />
-            Titik Persebaran Begal
-          </label>
-          <label>
-            <input type="checkbox" id="recent" defaultChecked />
-            Recent Event
-          </label>
-          <h5>Find by year :</h5>
-          <select
-            className="selectYear"
-            value={selectedYear}
-            onChange={(e) => filterByYear(e.target.value)}
-            style={{
-              width: "100%",
-              padding: "5px",
-              marginBottom: "10px",
-              backgroundColor: "#040300",
-              border: "1px solid #FFAA00",    
-              color: "#FFAA00",        
-            }}
-          >
-            {yearOptions.map((year) => (
-              <option key={year} value={year}>
-                {year === "all" ? "Semua Tahun" : year}
-              </option>
-            ))}
-          </select>
+          <div className="filter">
+            <h5 className="infoo">Filter:</h5>
+            <label>
+              <input type="checkbox" id="polygon" defaultChecked />
+              Dark Mode
+            </label>
+            <label>
+              <input type="checkbox" id="point" defaultChecked />
+              Titik Persebaran Begal
+            </label>
+            <label>
+              <input type="checkbox" id="recent" defaultChecked />
+              Recent Event
+            </label>
+            <h5>Find by year :</h5>
+            <select
+              className="selectYear"
+              value={selectedYear}
+              onChange={(e) => filterByYear(e.target.value)}
+              style={{
+                width: "100%",
+                padding: "5px",
+                marginBottom: "10px",
+                backgroundColor: "#040300",
+                border: "1px solid #FFAA00",    
+                color: "#FFAA00",        
+              }}
+            >
+              {yearOptions.map((year) => (
+                <option key={year} value={year}>
+                  {year === "all" ? "Semua Tahun" : year}
+                </option>
+              ))}
+            </select>
           </div>
-
         </div>
         <label>
           <h5 className="infoo">Info:</h5>
           <div id="info">-</div>
         </label>
         <label>
-        <button
-      className="zoomoutBtn"
-      onClick={zoomOutToInitialView}
-      style={{
-        padding: "5px",
-        backgroundColor: "#040300",
-        color: "#FFAA00",
-        border:"1px solid red",
-        borderRadius: "5px",
-        cursor: "pointer",
-        marginTop: "5px",
-      }}
-    >
-      Zoom Out
-    </button>
+          <button
+            className="zoomoutBtn"
+            onClick={zoomOutToInitialView}
+            style={{
+              padding: "5px",
+              backgroundColor: "#040300",
+              color: "#FFAA00",
+              border:"1px solid red",
+              borderRadius: "5px",
+              cursor: "pointer",
+              marginTop: "5px",
+            }}
+          >
+            Zoom Out
+          </button>
         </label>
-
       </div>
-
-      <div
-        className="buttonHome"
-        style={{ cursor: "pointer" }}
-        onClick={() => navigate("/")}
-      >
-        Home
       </div>
-      <div className="policeLine topPolice"></div>
-      <div className="policeLine botPolice"></div>
-    </div>
   );
 };
 
