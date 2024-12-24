@@ -584,6 +584,13 @@ const MapComponent = () => {
         <h4>Waspada!!</h4>
         <h5 className="textPeringatan">Anda berada di daerah Rawan begal</h5>
       </div>
+      <div
+        className="buttonHome"
+        style={{ cursor: "pointer" }}
+        onClick={() => navigate("/")}
+      >
+        Home
+      </div>
       </div>
   );
 };
