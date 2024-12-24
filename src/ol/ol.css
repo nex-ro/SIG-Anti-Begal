@@ -76,15 +76,35 @@
     #040300 10px,
     #040300 20px
   );
-  animation: move-stripes-horizontal 20s linear infinite;
+  animation: move-stripes-horizontal 10s linear infinite;
 }
 .topPolice{
   position: absolute;
   top: 0px;
+  z-index: 99;
+  display: none;
+
+
 }
 .botPolice{
   position: absolute;
   bottom: 0px;
+  z-index: 99;
+  display: none;
+
+}
+.Peringatan{
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  padding: 5px;
+  padding-left: 15px;
+  animation: flicker 0.5s infinite alternate;
+  background-color: #04030070;
+  border-radius: 10px;
+  border:  3px solid Red;
+  color: #FFAA00;
+  display: none;
 }
 .headd,p{
   align-items: center;
@@ -159,5 +179,13 @@ color: #FFAA00;
   100% {
     background-position: 1000px 0;
   }
+}
+@keyframes flicker {
+  0% { color: #040300; }
+  100% { color: #FFAA00; }
+}
 
+@keyframes showing {
+  0% { scale:0%; }
+  100% { sclae:100%; }
 }
