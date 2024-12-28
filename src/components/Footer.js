@@ -21,7 +21,7 @@ export const Footer = () => {
           <MailchimpForm />
           <Col size={12} sm={6}>
             {/* <img src={logo} alt="Logo" /> */}
-            <p className="footerLogo">PirateCoderz</p>
+            <p className="footerLogo">Waspada Begal Pekanbaru</p>
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
@@ -29,7 +29,7 @@ export const Footer = () => {
               <a href={facebook}><img src={navIcon2} alt="Icon" /></a>
               <a href={instagram}><img src={navIcon3} alt="Icon" /></a>
             </div>
-            <p>Copyright 2024. All Rights Reserved by PirateCoderz.</p>
+            <p>Copyright 2024. All Rights Reserved by Kelompok4.</p>
           </Col>
         </Row>
       </Container>

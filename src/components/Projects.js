@@ -1,6 +1,6 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/proj-img1.jpeg";
+import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/proj-img2.jpeg";
 import projImg3 from "../assets/img/proj-img3.jpeg";
 import projImg4 from "../assets/img/proj-img4.jpeg";
@@ -53,7 +53,7 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
+                <h2>Informasi</h2>
                 <p>These Projects are made by me and in different production levels. Like in React.js, Next.js, Wordpress, Website in PHP etc.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
