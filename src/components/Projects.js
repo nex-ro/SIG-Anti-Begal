@@ -1,11 +1,11 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/proj-img2.jpeg";
-import projImg3 from "../assets/img/proj-img3.jpeg";
-import projImg4 from "../assets/img/proj-img4.jpeg";
-import projImg5 from "../assets/img/proj-img5.jpeg";
-import projImg6 from "../assets/img/proj-img6.jpeg";
+import projImg1 from "../assets/img/project-img1.jpg";
+import projImg2 from "../assets/img/project-img2.jpg";
+import projImg3 from "../assets/img/project-img3.jpg";
+import projImg4 from "../assets/img/project-img4.jpg";
+import projImg5 from "../assets/img/project-img5.jpg";
+import projImg6 from "../assets/img/project-img6.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -14,33 +14,33 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Pirate Ecommerce",
-      description: "Next JS Ecommerce Site",
+      title: "4 orang begal di pekanbaru",
+      description: "Beberapa orang yang telah melakukan pembegalan terhadap pengendara motor yang ada di pekanbaru",
       imgUrl: projImg6,
     },
     {
-      title: "PHP Website",
-      description: "Design & Development",
+      title: "Hukuman 4 tahun penjara",
+      description: "Pihak polisi melakukan vonis hukum terhadap begal max 4 tahun penjara",
       imgUrl: projImg2,
     },
     {
-      title: "UAE DESERT ADVENTURES",
-      description: "Next JS | Design & Development",
+      title: "WASPADA! Orang dijalanan lebih sering menjadi target begal",
+      description: "Pihak polisi menghimbau kepada pengendara motor ataupun pejalan kaki agar lebih berhati hati untuk upaya menghindari pelaku begal",
       imgUrl: projImg3,
     },
     {
-      title: "Wordpress Shopping Site",
-      description: "Design & Development",
+      title: "12 Orang tersangka melakukan pembegalan didaerah marpoyan",
+      description: "Polisi berhasil menangkap 12 orang tersangka pembegalan didaerah marpoyan",
       imgUrl: projImg4,
     },
     {
-      title: "Pirate Coderz Portfolio",
-      description: "React JS | Design & Development",
+      title: "2 Tersangka Ditangkap!",
+      description: "Pembegalan ini dilakukan di jalanan oleh sepasang sekasih dan kini telah diamankan polisi",
       imgUrl: projImg5,
     },
     {
-      title: "React Website",
-      description: "Design & Development",
+      title: "INFO PEKANBARU!!!",
+      description: "Polisi berhasil mengamankan pelaku begal yang ada disekitar daerah hangtuah tenayan raya",
       imgUrl: projImg1,
     },
   ];
@@ -53,8 +53,8 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Informasi</h2>
-                <p>These Projects are made by me and in different production levels. Like in React.js, Next.js, Wordpress, Website in PHP etc.</p>
+                <h2>Informasi Begal</h2>
+                <p>Beberapa Informasi terkait begal yang terjadi sekitaran pekanbaru</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
