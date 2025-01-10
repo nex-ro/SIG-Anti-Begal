@@ -29,9 +29,6 @@ export const NavBar = () => {
             <Nav.Link as={NavLink} to="/" className="navbar-link">
               Home
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/skills" className="navbar-link">
-              Tentang
-            </Nav.Link>
             <Nav.Link as={NavLink} to="/map" className="navbar-link">
               Maps
             </Nav.Link>
