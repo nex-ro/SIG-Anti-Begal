@@ -65,7 +65,7 @@ const MapComponent = () => {
   const getScale = (kejadian) => 0.08 + Math.min(kejadian, 10) * 0.0005;
 
   // Function to detect begal locations within radius
-  const detectBegalInRadius = (userLocation, radius = 2000) => {
+  const detectBegalInRadius = (userLocation, radius = 1000) => {
     if (radiusLayerRef.current) {
       mapRef.current.removeLayer(radiusLayerRef.current);
     }
